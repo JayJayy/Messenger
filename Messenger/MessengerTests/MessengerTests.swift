@@ -1,35 +1,80 @@
 //
 //  MessengerTests.swift
-//  MessengerTests
+//  Budget
 //
-//  Created by Johannes Starke on 31.01.17.
-//  Copyright © 2017 Johannes Starke. All rights reserved.
+//  Created by Johannes Starke on 29.10.16.
+//  Copyright © 2016 Johannes Starke. All rights reserved.
 //
 
 import XCTest
 @testable import Messenger
 
+struct TestMessage: Message {
+    let test: Int
+}
+
 class MessengerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMessengerWithSelfAsObserver() {
+        let sut = Messenger()
+
+        let test = 10
+        
+        let messageExpectation = expectation(description: "waitingForMessage")
+        
+        sut.subscripte(me: self, to: TestMessage.self) { message in
+            XCTAssertEqual(message.test, test)
+            
+            messageExpectation.fulfill()
+        }
+        
+        DispatchQueue(label: "MessagePublish").async {
+            sut.publish(message: TestMessage(test: test))
+        }
+        
+        waitForExpectations(timeout: 5.0) { (error) in
+            XCTAssertNil(error)
+        }
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+
+    func testMessengerWithTokenAsObserver() {
+        let sut = Messenger()
+
+        var token: AnyObject? = NSObject()
+        var callCount: Int = 0
+
+        let messageExpectation = expectation(description: "waitingForMessages")
+
+        if let token = token {
+            sut.subscripte(me: token, to: TestMessage.self) { _ in
+                callCount += 1
+            }
+        }
+
+        DispatchQueue(label: "MessagePublish").async {
+            sut.publish(message: TestMessage(test: 0))
+
+            XCTAssertEqual(callCount, 1)
+
+            token = nil
+            
+            sut.publish(message: TestMessage(test: 0))
+
+            XCTAssertEqual(callCount, 1)
+
+            messageExpectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 5.0) { error in
+            XCTAssertNil(error)
         }
     }
     
