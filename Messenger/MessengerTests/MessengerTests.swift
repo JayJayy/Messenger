@@ -30,7 +30,7 @@ class MessengerTests: XCTestCase {
         
         let messageExpectation = expectation(description: "waitingForMessage")
         
-        sut.subscripte(me: self, to: TestMessage.self) { message in
+        sut.subscribe(me: self, to: TestMessage.self) { message in
             XCTAssertEqual(message.test, test)
             
             messageExpectation.fulfill()
@@ -54,7 +54,7 @@ class MessengerTests: XCTestCase {
         let messageExpectation = expectation(description: "waitingForMessages")
 
         if let token = token {
-            sut.subscripte(me: token, to: TestMessage.self) { _ in
+            sut.subscribe(me: token, to: TestMessage.self) { _ in
                 callCount += 1
             }
         }

@@ -28,7 +28,7 @@ public class Messenger {
         }
     }
     
-    public func subscripte<TMessage: Message>(me token: AnyObject, to messageType: TMessage.Type, onReceive delegate: @escaping (_ message: TMessage) -> ()) {
+    public func subscribe<TMessage: Message>(me token: AnyObject, to messageType: TMessage.Type, onReceive delegate: @escaping (_ message: TMessage) -> ()) {
         let storeName = "\(TMessage.self)"
         
         self.store.store(item: Receiver.build(for: token, with: delegate), in: storeName)
