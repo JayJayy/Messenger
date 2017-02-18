@@ -222,7 +222,6 @@
 				TargetAttributes = {
 					8F7A16311E4125240043D02C = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 43Y7S8P4XL;
 						ProvisioningStyle = Automatic;
 					};
 					8FC13F6D1E4122F200E9FBD1 = {
@@ -356,7 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43Y7S8P4XL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessengerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.johannesstarke.MessengerExample;
@@ -369,7 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43Y7S8P4XL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessengerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.johannesstarke.MessengerExample;
