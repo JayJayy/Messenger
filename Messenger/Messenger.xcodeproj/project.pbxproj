@@ -19,7 +19,6 @@
 		8F7A16471E4126610043D02C /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A16461E4126610043D02C /* Receiver.swift */; };
 		8F7A16491E4127480043D02C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A16481E4127480043D02C /* Message.swift */; };
 		8FC13F781E4122F300E9FBD1 /* Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC13F6E1E4122F300E9FBD1 /* Messenger.framework */; };
-		8FC13F7F1E4122F300E9FBD1 /* Messenger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FC13F711E4122F300E9FBD1 /* Messenger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		8F7A16461E4126610043D02C /* Receiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
 		8F7A16481E4127480043D02C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8FC13F6E1E4122F300E9FBD1 /* Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FC13F711E4122F300E9FBD1 /* Messenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messenger.h; sourceTree = "<group>"; };
 		8FC13F721E4122F300E9FBD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC13F771E4122F300E9FBD1 /* MessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC13F7E1E4122F300E9FBD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		8FC13F701E4122F300E9FBD1 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				8FC13F711E4122F300E9FBD1 /* Messenger.h */,
 				8F7A16281E4123F80043D02C /* WeakStore.swift */,
 				8F7A16461E4126610043D02C /* Receiver.swift */,
 				8F7A16261E4123E50043D02C /* Messenger.swift */,
@@ -149,7 +146,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FC13F7F1E4122F300E9FBD1 /* Messenger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
