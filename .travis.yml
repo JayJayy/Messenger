@@ -6,5 +6,5 @@ script:
     -sdk iphonesimulator
     -project Messenger/Messenger.xcodeproj
     -scheme MessengerTests
-    -destination 'platform=iOS Simulator,OS=latest,name=iPhone 6'
+    -destination 'platform=iOS Simulator,OS=10.1,name=iPhone 6'
     CODE_SIGNING_REQUIRED=NO
