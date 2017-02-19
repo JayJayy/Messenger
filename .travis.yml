@@ -4,7 +4,7 @@ language: objective-c
 script:
   xcodebuild clean test
     -sdk iphonesimulator
-    -project Messenger.xcodeproj
+    -project Messenger/Messenger.xcodeproj
     -scheme MessengerTests
     -destination 'platform=iOS Simulator,OS=10.2,name=iPhone 6'
     CODE_SIGNING_REQUIRED=NO
