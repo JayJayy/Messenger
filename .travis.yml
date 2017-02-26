@@ -1,0 +1,10 @@
+osx_image: xcode8.2
+
+language: objective-c
+script:
+  xcodebuild clean test
+    -sdk iphonesimulator
+    -project Messenger/Messenger.xcodeproj
+    -scheme MessengerTests
+    -destination 'platform=iOS Simulator,OS=10.1,name=iPhone 6'
+    CODE_SIGNING_REQUIRED=NO
