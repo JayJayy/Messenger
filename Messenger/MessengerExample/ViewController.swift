@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func didReceiveMemoryWarning() {
+        @IBOutlet weak var firstMessageDateField: NSTextField!
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

@@ -7,16 +7,33 @@
 //
 
 import Cocoa
+import Messenger
+
+struct TestMessage: Message {
+    
+}
 
 class ViewController: NSViewController {
-    @IBOutlet weak var lastMessageReceivedTextField: NSTextField!
-
-    var lastMessageDate: Date
+    @IBOutlet weak var firstMessageTextField: NSTextField?
+    @IBOutlet weak var lastMessageTextField: NSTextField?
+    
+    var testMessageToken: AnyObject? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        Messenger.shared.subscribe(me: self, to: TestMessage.self) { [weak self] _ in
+            self?.lastMessageTextField?.objectValue = Date()
+        }
+        
+        testMessageToken = NSObject()
+        
+        if let token = testMessageToken {
+            Messenger.shared.subscribe(me: token, to: TestMessage.self) { [weak self] _ in
+                self?.firstMessageTextField?.objectValue = Date()
+                self?.testMessageToken = nil
+            }
+        }
     }
 
     override var representedObject: Any? {
@@ -25,6 +42,8 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func sendMessageAction(_ sender: AnyObject) {
+        Messenger.shared.publish(message: TestMessage())
+    }
 }
 

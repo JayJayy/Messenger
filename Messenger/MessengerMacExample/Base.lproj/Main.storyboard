@@ -83,18 +83,18 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="208"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MessengerMacExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="120"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="252" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LF-92-vYN">
-                                <rect key="frame" x="20" y="233" width="148" height="17"/>
+                                <rect key="frame" x="20" y="83" width="148" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="First message received:" id="mXz-5d-wwp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -102,7 +102,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="252" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJ8-8f-g4W">
-                                <rect key="frame" x="20" y="208" width="147" height="17"/>
+                                <rect key="frame" x="20" y="58" width="147" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Last message received:" placeholderString="" id="bnb-Gz-oko">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -110,27 +110,32 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRa-il-WSJ">
-                                <rect key="frame" x="184" y="233" width="276" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="time" id="W5s-wm-4Xd">
+                                <rect key="frame" x="184" y="83" width="149" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="no message received" id="W5s-wm-4Xd">
+                                    <dateFormatter key="formatter" dateStyle="short" timeStyle="medium" id="NEX-zy-4Me"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vL-j7-L2I">
-                                <rect key="frame" x="184" y="208" width="276" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="time" id="qVA-js-iUM">
+                                <rect key="frame" x="184" y="58" width="149" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="no message received" id="qVA-js-iUM">
+                                    <dateFormatter key="formatter" dateStyle="short" timeStyle="medium" id="nvL-Y0-gSo"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7j7-F1-5xA">
-                                <rect key="frame" x="363" y="169" width="97" height="19"/>
+                                <rect key="frame" x="236" y="19" width="97" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="Send message" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4au-Wi-fGw">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="sendMessageAction:" target="XfG-lQ-9wD" id="Gsc-eJ-Uwn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -145,16 +150,19 @@
                             <constraint firstAttribute="trailing" secondItem="0vL-j7-L2I" secondAttribute="trailing" constant="22" id="pXL-fE-Bul"/>
                             <constraint firstItem="MJ8-8f-g4W" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="rUe-en-XT6"/>
                             <constraint firstItem="2LF-92-vYN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="uEl-3S-8QB"/>
+                            <constraint firstAttribute="bottom" secondItem="7j7-F1-5xA" secondAttribute="bottom" constant="20" id="vmM-Sh-qST"/>
                             <constraint firstAttribute="trailing" secondItem="lRa-il-WSJ" secondAttribute="trailing" constant="22" id="woA-c2-3tJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lastMessageReceivedTextField" destination="lRa-il-WSJ" id="mku-nL-i4s"/>
+                        <outlet property="firstMessageTextField" destination="lRa-il-WSJ" id="eho-bK-ZVR"/>
+                        <outlet property="lastMessageTextField" destination="0vL-j7-L2I" id="2lu-ZU-hBt"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="uhe-zy-bVx"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="76" y="591"/>
         </scene>
     </scenes>
 </document>
