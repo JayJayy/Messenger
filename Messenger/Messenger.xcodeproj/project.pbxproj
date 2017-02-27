@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506E6FC61E6303C60031A88B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E6FC51E6303C60031A88B /* AppDelegate.swift */; };
+		506E6FC81E6303C60031A88B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E6FC71E6303C60031A88B /* ViewController.swift */; };
+		506E6FCA1E6303C60031A88B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506E6FC91E6303C60031A88B /* Assets.xcassets */; };
+		506E6FCD1E6303C60031A88B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506E6FCB1E6303C60031A88B /* Main.storyboard */; };
+		506E6FD21E63042E0031A88B /* Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC13F6E1E4122F300E9FBD1 /* Messenger.framework */; };
+		506E6FD31E63042E0031A88B /* Messenger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC13F6E1E4122F300E9FBD1 /* Messenger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F7A16271E4123E50043D02C /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A16261E4123E50043D02C /* Messenger.swift */; };
 		8F7A16291E4123F80043D02C /* WeakStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A16281E4123F80043D02C /* WeakStore.swift */; };
 		8F7A162B1E4124B10043D02C /* MessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A162A1E4124B10043D02C /* MessengerTests.swift */; };
@@ -22,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		506E6FD41E63042E0031A88B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FC13F651E4122F200E9FBD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC13F6D1E4122F200E9FBD1;
+			remoteInfo = Messenger;
+		};
 		8F7A16441E41253D0043D02C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8FC13F651E4122F200E9FBD1 /* Project object */;
@@ -38,7 +51,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		506E6FD61E63042E0031A88B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				506E6FD31E63042E0031A88B /* Messenger.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		506E6FC31E6303C60031A88B /* MessengerMacExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerMacExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		506E6FC51E6303C60031A88B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		506E6FC71E6303C60031A88B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		506E6FC91E6303C60031A88B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		506E6FCC1E6303C60031A88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		506E6FCE1E6303C60031A88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F7A16261E4123E50043D02C /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		8F7A16281E4123F80043D02C /* WeakStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakStore.swift; sourceTree = "<group>"; };
 		8F7A162A1E4124B10043D02C /* MessengerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerTests.swift; sourceTree = "<group>"; };
@@ -59,6 +92,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		506E6FC01E6303C60031A88B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506E6FD21E63042E0031A88B /* Messenger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F7A162F1E4125240043D02C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,6 +125,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		506E6FC41E6303C60031A88B /* MessengerMacExample */ = {
+			isa = PBXGroup;
+			children = (
+				506E6FC51E6303C60031A88B /* AppDelegate.swift */,
+				506E6FC71E6303C60031A88B /* ViewController.swift */,
+				506E6FC91E6303C60031A88B /* Assets.xcassets */,
+				506E6FCB1E6303C60031A88B /* Main.storyboard */,
+				506E6FCE1E6303C60031A88B /* Info.plist */,
+			);
+			path = MessengerMacExample;
+			sourceTree = "<group>";
+		};
 		8F7A16331E4125240043D02C /* MessengerExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				8F7A16331E4125240043D02C /* MessengerExample */,
+				506E6FC41E6303C60031A88B /* MessengerMacExample */,
 				8FC13F701E4122F300E9FBD1 /* Messenger */,
 				8FC13F7B1E4122F300E9FBD1 /* MessengerTests */,
 				8FC13F6F1E4122F300E9FBD1 /* Products */,
@@ -113,6 +167,7 @@
 				8FC13F6E1E4122F300E9FBD1 /* Messenger.framework */,
 				8FC13F771E4122F300E9FBD1 /* MessengerTests.xctest */,
 				8F7A16321E4125240043D02C /* MessengerExample.app */,
+				506E6FC31E6303C60031A88B /* MessengerMacExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +207,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		506E6FC21E6303C60031A88B /* MessengerMacExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506E6FCF1E6303C60031A88B /* Build configuration list for PBXNativeTarget "MessengerMacExample" */;
+			buildPhases = (
+				506E6FBF1E6303C60031A88B /* Sources */,
+				506E6FC01E6303C60031A88B /* Frameworks */,
+				506E6FC11E6303C60031A88B /* Resources */,
+				506E6FD61E63042E0031A88B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				506E6FD51E63042E0031A88B /* PBXTargetDependency */,
+			);
+			name = MessengerMacExample;
+			productName = MessengerMacExample;
+			productReference = 506E6FC31E6303C60031A88B /* MessengerMacExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8F7A16311E4125240043D02C /* MessengerExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F7A16411E4125240043D02C /* Build configuration list for PBXNativeTarget "MessengerExample" */;
@@ -212,10 +286,15 @@
 		8FC13F651E4122F200E9FBD1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Johannes Starke";
 				TargetAttributes = {
+					506E6FC21E6303C60031A88B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 43Y7S8P4XL;
+						ProvisioningStyle = Automatic;
+					};
 					8F7A16311E4125240043D02C = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -248,6 +327,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				506E6FC21E6303C60031A88B /* MessengerMacExample */,
 				8F7A16311E4125240043D02C /* MessengerExample */,
 				8FC13F6D1E4122F200E9FBD1 /* Messenger */,
 				8FC13F761E4122F300E9FBD1 /* MessengerTests */,
@@ -256,6 +336,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		506E6FC11E6303C60031A88B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506E6FCA1E6303C60031A88B /* Assets.xcassets in Resources */,
+				506E6FCD1E6303C60031A88B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F7A16301E4125240043D02C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +372,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		506E6FBF1E6303C60031A88B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506E6FC81E6303C60031A88B /* ViewController.swift in Sources */,
+				506E6FC61E6303C60031A88B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F7A162E1E4125240043D02C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +413,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		506E6FD51E63042E0031A88B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC13F6D1E4122F200E9FBD1 /* Messenger */;
+			targetProxy = 506E6FD41E63042E0031A88B /* PBXContainerItemProxy */;
+		};
 		8F7A16451E41253D0043D02C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8F7A16311E4125240043D02C /* MessengerExample */;
@@ -328,6 +431,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		506E6FCB1E6303C60031A88B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506E6FCC1E6303C60031A88B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		8F7A16381E4125240043D02C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -347,6 +458,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		506E6FD01E6303C60031A88B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 43Y7S8P4XL;
+				INFOPLIST_FILE = MessengerMacExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = de.johannesstarke.MessengerMacExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		506E6FD11E6303C60031A88B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 43Y7S8P4XL;
+				INFOPLIST_FILE = MessengerMacExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = de.johannesstarke.MessengerMacExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		8F7A16421E4125240043D02C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -478,7 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 43Y7S8P4XL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -488,9 +635,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.johannesstarke.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -500,7 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 43Y7S8P4XL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -510,9 +659,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.johannesstarke.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -551,6 +702,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		506E6FCF1E6303C60031A88B /* Build configuration list for PBXNativeTarget "MessengerMacExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506E6FD01E6303C60031A88B /* Debug */,
+				506E6FD11E6303C60031A88B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8F7A16411E4125240043D02C /* Build configuration list for PBXNativeTarget "MessengerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
